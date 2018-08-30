@@ -1,5 +1,28 @@
+<!-- 
+	I have marked points in ths file file with comments, check them out 
+  Also try renaming this file to something without any space in it.User underscore 
+	if you want to separate the words.
+Example: instead of PAGE LAYOUT.html .Use  page_layout.html or layout.html
+
+NOTES:
+
+1. Nice indentation. Keep doing it right.
+2. The design looks as the reference photo. Good job
+
+++++THINGS TO IMPROVE++++
+
+1. Move all repeated styles into the <style> tag in the <head>
+2. Remove all "extra" tags that are no serving an purpose.
+3. Use proper tags for clickable links
+4. Since you are still beginning, try putting in comments here and there as self notes.
+
+
+Feel free to remove the comments I have added as you work on the page.
+After you have made above changes/improvement. we will refine the design to make it look
+more adaptable to different screen sizes. Go for it!
+-->
 <!DOCTYPE html>
-<!DOCTYPE html>
+<!DOCTYPE html><!-- Declared twice-->
 <html>
 	<head>
 		<title>Page layout</title>
@@ -19,7 +42,7 @@
 				font-size: 20px;
 				font-style: courier;
 			}
-
+      /*How did you know about flex? not simply copy and paste right? haha*/
 			.flex{
 				display: flex;
 				align-items: center;
@@ -42,6 +65,8 @@
 				color: #000000;
 				background-color:#888888; 
 			}
+
+			/*The style below has no values spepcified. This is actually an error */
 			.img{
 				opacity: ;
 				transition: ;
@@ -55,18 +80,28 @@
 	</head>
 	<body>
 		<header>
-			<strong>NEWS FEED</strong>
+			<strong>NEWS FEED</strong><!-- If it is the main title of the page, use h1 tag -->
 		</header>
 		<p class="p">
+			<!-- em tag is old school now, usually people would use CSS to achieve a better look. The styling of <em> text can different depending on browser so designers who want to have consistency will avoid it -->
 			This is a news feed from GNN on 24th August,2018. The topic being ... <em>!Gloria es gran pez!</em>  <br>ffhev ergheiufhe9r eruhofw erfy9wd yhtj rehege et5uty qwrfth ethtyja  
 		</p>
 
 		<div class="flex">
 
 			<div>
-				<div >
-					<img src="singapore-high-definition-wallpaper_020724173_173.jpg" class="img" style="width: 450px; height: 300px;transition: .5s;">
+
+				<div><!-- This wrapping div may not be needed. Since it has no special purpose for this design. Less/Minimum html tags the better.Only use what you need-->
+
+					<!-- The styling in this image tag could be moved into a CSS file instead on inlining it here. Writing  styles directly on a tag 
+					can cause maintenance headache. Because you would know where parts of design exists in case you want to change something later. 
+					It can also be difficult when you have duplicated the inline style at other place and you need to change a value across the entire page-->
+					
+					<img src="singapore-high-definition-wallpaper_020724173_173.jpg" class="img" 
+					style="width: 450px; height: 300px;transition: .5s;">
+
 				</div>
+
 				<div style="height:40px; width: 450px; background-color: #87CEEB;">
 					<div>
 						<span style="float: left; padding-left: 30px; padding-top: 8px;">
@@ -77,6 +112,7 @@
 						</span>
 					</div>
 				</div>
+
 				<div style="height:120px; width:450px; background-color: #FFF8DC; padding-left: 20px; box-sizing: border-box; padding-top: 10px;">
 					ther erfth dewgery ertiw nt5yu nettj sertwry tukerb <br>455u yrty wefg 4y56ury ertrb ehd ebew ethrh gryhjt <br> rymkd ergn sbernty yjaeatg ukiuf egyb eg 
 					<p style="text-decoration: underline; margin-left: 4px;">
@@ -123,7 +159,10 @@
 				</div>
 				<div style="height:120px; width: 450px; background-color: #FFF8DC; margin-left: 20px;box-sizing: border-box; padding-top: 10px;padding-left: 20px;">
 					ther erfth dewgery ertiw nt5yu nettj sertwry tukerb 455u yrty wefg 4y56ury ertrb ehd ebew ethrh gryhjt rymkd ergn sbernty yjaeatg ukiuf egyb eg
+
+					<!-- This looks it should be a link. -->
 					<p style="text-decoration: underline; margin-left: 4px;">
+
 						See This
 					</p> 
 				</div>
@@ -132,6 +171,15 @@
 		</div>
 
 		<footer>
+			<!-- If you wanted to center this tag, you could have simply used
+			text-align: center;
+
+			or 
+
+			display:inline-block;
+			margin: 0 auto;
+
+			-->
 			<a href="http://www.w3schools.com/html/">
 				View All
 			</a>
