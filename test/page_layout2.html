@@ -8,49 +8,54 @@
 					font-family: "Calibri",Candara,Segeo;
 					font-size: 18px;
 				}
+				.container{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
 				h1{
 					text-align: center;
 					font-weight: bold;
-					font-size:45px;
-				}
+					font-size: 45px;
+					}
 				.p{
 					text-align: center;
 					font-size: 22px;
 				}
-				/*how i got to know about flex. so i know if you want contents in a div container to be horizontal on one line, you use float. but this float thing, haha i dont see top. its some way bi. immediately i tried to float my contents in my div, it started to mess up. so i googled on how to make contents in a div container line up horizontally. then someone mentioned flex. never heard it so wanted to give it try and hopefully i would understand that more. so i read on flex from w3schools and tried it. i got it right with the first try! haha. i understand flex better than float*/
-				.container{
-					display:flex;
-					align-items: center;
-					justify-content: center;
-				}
-				image{
-					height: 250px;
-					width: 450px;
+				.image{
+					height: 270px;
+					width: 400px;
 					margin-left: 20px;
 				}
-				image:hover{
-					opacity: .9;
-					filter:brightness(.4);
+				.image:hover{
+					filter:brightness(.6);
 					transition: .5s;
 				}
 				.box1{
 					height: 30px;
 					background-color: #330000;
-					width: 450px;
+					width: 400px;
 					margin-left: 20px;
 					color: #ffffff;
 				}
 				.box2{
-					height: 100px;
-					width: 450px;
+					height: 80px;
+					width: 400px;
 					margin-left: 20px;
 					background-color: #FFFF99;
 					box-sizing: border-box;
 					padding-top: 10px;
 					padding-left: 15px;
 				}
-				/*im trying out these animation styles and transition things im reading about haha. if im able do it, then i understand it enough.
-				is it possible to have different links with different styles functioning in one?*/
+				.span{
+					float: left;
+					padding-left: 10px;
+					padding-top: 3px;
+					padding-right: 10px;
+				}
+				#span1{
+					float: right;
+				}
 				footer{
 					text-align: center;
 					height: 35px;
@@ -58,8 +63,8 @@
 					background-color: #330000; 
 					box-sizing: border-box;
 					padding-top: 6px;
-					margin-left: 800px;
-					margin-top: 60px;
+					margin-left: 600px;
+					margin-top: 30px;
 					transition: width 1s, height 1s;
 					animation-name: trial;
 					animation-duration: 5s;
@@ -76,65 +81,55 @@
 					50% {background-color: #0033FF;}
 					100% {background-color: #CC00CC;}
 				}
-				.span{
-					float: left;
-					padding-left: 10px;
-					padding-top: 3px;
-					padding-right: 10px;
-				}
-				#span1{
-					float: right;
-				}
 				#a{
 					text-decoration: none; 
 					color: #ffffff;
-				}
+				}	
 			</style>
 		</head>
 		<body>
 			<h1>
-				NEWS FEED
+				News Feed
 			</h1>
 			<p class="p">
 				this a tryout to correct the first codes I wrote. <br>I'll fix all the errors and this second time will be better than the first. wish me luck! haha
 			</p>
 			<div class="container">
 				<div>
-					<img src="singapore--73635-15.jpg">
+					<img src="singapore--73635-15.jpg" class="image">
 					<div class="box1"> 
 						<span class="span">Singapore</span>
 						<span class="span" id="span1">bing.com</span>
 					</div>
 					<div class="box2">
 						<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
-						<p><a href="bing.com"> See This </a></p>
+						<a href="bing.com"> See This </a>
 					</div>
 				</div>
 
 				<div>
-					<img src="99acdf15912e4b82740a1aba26fdc0d6--high-resolution-images-small-gardens.jpg">
+					<img src="99acdf15912e4b82740a1aba26fdc0d6--high-resolution-images-small-gardens.jpg" class="image">
 					<div class="box1"> 
 						<span class="span">Singapore</span>
 						<span class="span" id="span1">bing.com</span>
 					</div>
 					<div class="box2">
 						<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
-						<p><a href="bing.com"> See This </a></p>
+						<a href="bing.com"> See This </a>
 					</div>
 				</div>
 
 				<div>
-					<img src="Singapore-Desktop-Wallpaper-For-PC.jpg">
+					<img src="Singapore-Desktop-Wallpaper-For-PC.jpg" class="image">
 					<div class="box1"> 
 						<span class="span">Singapore</span>
 						<span class="span" id="span1">bing.com</span>
 					</div>
 					<div class="box2">
 						<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
-						<p><a href="bing.com"> See This </a></p>
+						<a href="bing.com"> See This </a>
 					</div>
 				</div>
-
 			</div>
 			<footer>
 				<a href="http://www.w3schools.com/html/" id="a"> View All </a>
