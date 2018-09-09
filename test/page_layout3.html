@@ -1,138 +1,180 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>page_layout2</title>
-			<style type="text/css">
-				body{
-					background-color: #fff2e6;
-					font-family: "Calibri",Candara,Segeo;
-					font-size: 18px;
-				}
-				.container{
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				}
-				h1{
-					text-align: center;
-					font-weight: bold;
-					font-size: 45px;
-					}
-				.p{
-					text-align: center;
-					font-size: 22px;
-				}
-				.image{
-					height: 270px;
-					width: 400px;
-					margin-left: 20px;
-				}
-				.image:hover{
-					filter:brightness(.6);
-					transition: .5s;
-				}
-				.box1{
-					height: 30px;
-					background-color: #330000;
-					width: 400px;
-					margin-left: 20px;
-					color: #ffffff;
-				}
-				.box2{
-					height: 80px;
-					width: 400px;
-					margin-left: 20px;
-					background-color: #FFFF99;
-					box-sizing: border-box;
-					padding-top: 10px;
-					padding-left: 15px;
-				}
-				.span{
-					float: left;
-					padding-left: 10px;
-					padding-top: 3px;
-					padding-right: 10px;
-				}
-				#span1{
-					float: right;
-				}
-				footer{
-					text-align: center;
-					height: 35px;
-					width: 100px;
-					background-color: #330000; 
-					box-sizing: border-box;
-					padding-top: 6px;
-					margin-left: 600px;
-					margin-top: 30px;
-					transition: width 1s, height 1s;
-					animation-name: trial;
-					animation-duration: 5s;
-					animation-iteration-count: infinite;
-					animation-delay: 1s;
-				}
-				footer:hover{
-					width: 150px;
-					height: 40px;
-				}
-				@keyframes trial {
-					0% {background-color: #330000;}
-					25% {background-color: #663300}
-					50% {background-color: #0033FF;}
-					100% {background-color: #CC00CC;}
-				}
-				#a{
-					text-decoration: none; 
-					color: #ffffff;
-				}	
-			</style>
-		</head>
-		<body>
-			<h1>
-				News Feed
-			</h1>
-			<p class="p">
-				this a tryout to correct the first codes I wrote. <br>I'll fix all the errors and this second time will be better than the first. wish me luck! haha
-			</p>
-			<div class="container">
-				<div>
-					<img src="singapore--73635-15.jpg" class="image">
-					<div class="box1"> 
-						<span class="span">Singapore</span>
-						<span class="span" id="span1">bing.com</span>
-					</div>
-					<div class="box2">
-						<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
-						<a href="bing.com"> See This </a>
-					</div>
-				</div>
-
-				<div>
-					<img src="99acdf15912e4b82740a1aba26fdc0d6--high-resolution-images-small-gardens.jpg" class="image">
-					<div class="box1"> 
-						<span class="span">Singapore</span>
-						<span class="span" id="span1">bing.com</span>
-					</div>
-					<div class="box2">
-						<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
-						<a href="bing.com"> See This </a>
-					</div>
-				</div>
-
-				<div>
-					<img src="Singapore-Desktop-Wallpaper-For-PC.jpg" class="image">
-					<div class="box1"> 
-						<span class="span">Singapore</span>
-						<span class="span" id="span1">bing.com</span>
-					</div>
-					<div class="box2">
-						<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
-						<a href="bing.com"> See This </a>
-					</div>
-				</div>
+<html>
+<head>
+	<title>page_layout2</title>
+	<style type="text/css">
+		body{
+			background-color: #fff2e6;
+			font-family: "Calibri",Candara,Segoe;
+			font-size: 18px;
+		}
+		.container{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		h1{
+			text-align: center;
+			font-weight: bold;
+			font-size: 45px;
+		}
+		.p{
+			text-align: center;
+			font-size: 22px;
+		}
+		.image{
+			height: 270px;
+			width: 400px;
+			margin-left: 20px;
+		}
+		.image:hover{
+			filter:brightness(.6);
+			transition: .5s;
+		}
+		.box1{
+			height: 30px;
+			background-color: #330000;
+			width: 400px;
+			margin-left: 20px;
+			color: #ffffff;
+		}
+		.box2{
+			height: 80px;
+			width: 400px;
+			margin-left: 20px;
+			background-color: #FFFF99;
+			box-sizing: border-box;
+			padding-top: 10px;
+			padding-left: 15px;
+		}
+		.span{
+			float: left;
+			padding-left: 10px;
+			padding-top: 3px;
+			padding-right: 10px;
+		}
+		#span1{
+			float: right;
+		}
+		footer{
+			text-align: center;
+			height: 35px;
+			width: 100px;
+			background-color: #330000; 
+			box-sizing: border-box;
+			padding-top: 6px;
+			margin-left: 600px;
+			margin-top: 30px;
+			transition: width 1s, height 1s;
+			animation-name: trial;
+			animation-duration: 5s;
+			animation-iteration-count: infinite;
+			animation-delay: 1s;
+		}
+		footer:hover{
+			width: 150px;
+			height: 40px;
+		}
+		@keyframes trial {
+			0% {background-color: #330000;}
+			25% {background-color: #663300}
+			50% {background-color: #0033FF;}
+			100% {background-color: #CC00CC;}
+		}
+		#a{
+			text-decoration: none; 
+			color: #ffffff;
+		}	
+	</style>
+</head>
+<body>
+	<h1>
+		News Feed
+	</h1>
+	<p class="p">
+		this a tryout to correct the first codes I wrote. <br>I'll fix all the errors and this second time will be better than the first. wish me luck! haha
+	</p>
+	<div class="container">
+		<div>
+			<img src="singapore--73635-15.jpg" class="image">
+			<div class="box1"> 
+				<span class="span">Singapore</span>
+				<span class="span" id="span1">bing.com</span>
 			</div>
-			<footer>
-				<a href="http://www.w3schools.com/html/" id="a"> View All </a>
-			</footer>
-		</body>
-	</html>
+			<div class="box2">
+				<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
+				<a href="bing.com"> See This </a>
+			</div>
+		</div>
+		
+		<div>
+			<img src="99acdf15912e4b82740a1aba26fdc0d6--high-resolution-images-small-gardens.jpg" class="image">
+			<div class="box1"> 
+				<span class="span">Singapore</span>
+				<span class="span" id="span1">bing.com</span>
+			</div>
+			<div class="box2">
+				<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
+				<a href="bing.com"> See This </a>
+			</div>
+		</div>
+		
+		<div>
+			<img src="Singapore-Desktop-Wallpaper-For-PC.jpg" class="image">
+			<div class="box1"> 
+				<span class="span">Singapore</span>
+				<span class="span" id="span1">bing.com</span>
+			</div>
+			<div class="box2">
+				<div>sdferv erbf hsr ryediu eryfgd kue dghut ehgr rfiu iujg lisehdg etuub</div>
+				<a href="bing.com"> See This </a>
+			</div>
+		</div>
+	</div>
+	
+	<div id="NotesContainer">
+		
+		<p class="">
+			Good Job on the improvements done to the page/design. The html looks succinct and clean.
+			The layout also feels more solid
+		</p>
+		<p>Here are a couple things would like for you to work and improve.</p>
+		<ul>
+			<li>
+				Use suggestive class names. A class name is like ".a" is very generic and could be of no meaning to you
+				after months. So if the a tag is serving as a clickable link, then you could use class name as .link instead.
+				There are a few conventional ways to name your css classes, and we will talk into details about that later.
+				For now try on your own to find better names of the classes, and look at other websites and see what they use.
+			</li>
+
+			<li>
+				To make the "flex" container more adaptive to different screen size you can further instruct on what should be done
+				when the content extends beyond the viewport. It is called flex wrapping. <br>
+				If you want the items to always fit into its container, then you can specify no wrapping. <br>
+				so try playing with "flex-wrap:" css property to see how you can make the contents fit to any viewport.
+				
+			</li>
+
+			<li>
+				Responsive web design is the type that adapts itself to the screen, by changing size, layout, etc.
+				In order to make a responsive design, avoid using a lot of px for width and heights and font sizes.
+				You can consider others units like %, rem, vh,vw,etc. <br>
+			</li>
+		</ul>
+		
+		<h3>Assignment</h3>
+		1. Remove the spacing underneath the photos and caption ("Singaport    bing.com")
+		2. Put shadows under each "card". I mean the 3 divs immediately under the .container class.
+			 To create shadow, use "box-shadow" css property
+		3. Make the margins on the left and right sides of items same/consistent. 
+			 a. The left margin/padding in the box with yellow background colors is bigger the right.
+			 b. The same issue is seen on the 3 main box/content/card within the .container class. Needs consistency text-decoration
+		4. Lastly, looks like elements placed before the footer is not showing up! 
+
+		
+	</div>
+	<footer>
+		<a href="http://www.w3schools.com/html/" id="a"> View All </a>
+	</footer>
+</body>
+</html>
