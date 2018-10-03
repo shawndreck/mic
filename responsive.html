@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 
-  
+
   <meta charset="UTF-8">
 
 
-  <!-- Meta tag to instruct browser to always use fullwidth of device, and not zoom out .
+  <!--
+  Meta tag to instruct browser to always use fullwidth of device, and not zoom out .
   This means the webpage is assumed to fit well in whatever device it is being viewed in.
   -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,11 +19,116 @@
   which is the highest standards mode supported by Internet Explorer, 
   from Internet Explorer 6 through IE11
   -->
+  
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <style>
+  .container {
+  max-width: 1140px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: #dfdfdf;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+  /* A row will encapsulate columns. Simply put a row is a grouping of columns */
+  .row{ 
+    display: block; 
+  }
+
+/* We can consider each part of the  */
+.column{
+    min-width: 40px;
+    min-height: 200px;
+    width: 100%;
+    background-color: #f5f8fa;
+    border: 1px solid #a5a8aa;
+    margin-bottom: 20px;
+
+    /* START The following css is not related grid/responsive design. I just included it to help illustrate  my point */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color:  #a5a8aa;
+    font-weight: bold;
+
+    /*END */
+
+  }
+
+/* We will use margin right to set up spacing between columns */
+  .mr-20{
+    margin-right: 20px;
+  }
+  
+
+
+  /* Now the fun part.we want to tell the browser that WHEN the viewport is 360px wide or more,
+  it should use flex on the .row class. 
+  We will use media query. 
+  Media query syntax (how to declare) is very simple.
+  Starts with @media and then the conditions to query */
+
+@media (min-width:800px){ /* All css within these { } will take effect when the browser's viewport is  AT LEAST 400px wide */
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column{
+    width: 30%;
+  }
+}
+
+@media (min-width:570px) and (max-width:799px){ /* here we are specifying a set of css rules to be used for device whose width is greater than or equal to 570px but smaller than 800px */
+
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column{
+    width: 45%;
+  }
+}
+  </style>
 
   <title>Document</title>
 </head>
 <body>
   
+<!-- 
+We will use 12 column grid system.
+We will group columns into "row"
+
+Grouping columns into rows makes it easy to think of
+the different parts/sections of a page. And to also
+manipulate them on different screen size (or viewports)
+-->
+<div class="container">
+
+  <div class="row">
+
+    <div class="column mr-20">1</div>
+    <div class="column mr-20">2</div>
+    <div class="column mr-20">3</div>
+    <div class="column mr-20">4</div>
+    <div class="column mr-20">5</div>
+
+    <div class="column mr-20">6</div>
+    <div class="column mr-20">7</div>
+    <div class="column mr-20">8</div>
+    <div class="column mr-20">9</div>
+    <div class="column mr-20">10</div>
+    <div class="column mr-20">11</div>
+    <div class="column">12</div><!-- The last column needs no space on the right -->
+  </div>
+</div>
+
+
 </body>
 </html>
