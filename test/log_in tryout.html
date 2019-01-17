@@ -3,25 +3,53 @@
 	<head>
 		<title>log_in tryout</title>
 		<style type="text/css">
-			body{
-				background-color: #FFF6F6;
+			body,html{
+				height: 100%;
 			}
 			.container{
-				height: 640px;
-				width: 1050px;
-				margin:auto;
-				border:1px solid black;
-				background-image: url(Cheetah-HD-Background.jpg);
+				height: 100%;
+				background-image: url(singapore-high-definition-wallpaper_020724173_173.jpg);
 				background-repeat: no-repeat;
 				background-size: cover;
-				background-position: center;
-				filter:brightness(.5);
+				background-attachment: fixed;
+				filter: blur(1px);
+				position: relative;
+				z-index: -1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.content{
+				height: 250px;
+				width: 500px;
+				border: 2px solid black;
+				box-sizing: border-box;
+				color: #000; 
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: rgba(255,255,255,.3);
+				position: relative;
+				
 			}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-		
-		<div>
+			<form class="content">
+				<div>
+				<label for="username">Username<br> </label>
+				<input type="text" name="username" placeholder="username">
+				<br>
+
+				<label for="password">Password<br> </label>
+				<input type="text" name="password" placeholder="password">
+				<br>
+
+				<input type="submit" name="sign in" value="Sign in">
+				<div>
+			</form>
+		</div>
+			
 	</body>
 	</html>

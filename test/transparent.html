@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>transparent</title>
+			<style type="text/css">
+				body,html{
+					height: 95%;
+					box-sizing: border-box;
+					font-family: "Calibri",Candara,Segoe;
+				}
+				.container{
+					height: 109%;
+					background-image: url(hyundai-elantra-2015-coupe-wallpaper-4.jpg);
+					background-repeat: no-repeat;
+					background-size: cover;
+					filter: brightness(.7);
+				}
+				.content{
+					height: 90%;
+					width: 40%;
+					background-color: rgba(0,0,0,.4);
+					color: rgb(255,255,255);
+					border-radius: 50px;
+				}
+				#flex{
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				}
+				form{
+					margin-top: 6%;
+				}
+				.logo{
+					height: 25%;
+					width: 25%;
+					display: block;
+					margin: auto;
+					margin-top: 6%;
+					border-radius: 50px;
+				}
+				/*To set the logo to transparent( inherit the transparent from it's container), set mix-blend-mode:multiply*/
+				input{
+					width: 30%;
+					margin: auto;
+					display: block;
+					padding: 1.5%;
+					background-color: inherit;
+					border:hidden;
+					font-size: 20px;
+					outline: none;
+					margin-bottom: 3%;
+					transition: width 1s;
+				}
+				input:focus{
+					width: 35%;
+					color: #fff;
+				}
+				input[type=text], input[type=password]{
+					background-image: url(fd0c559856ca991e9e28937dc802f0b0.png);
+					background-position: top left;
+					background-repeat: no-repeat;
+					padding-left: 8%;
+				}
+				#icon{
+					background-image: url(forgot-password-icon-27.png);
+				}
+				input::placeholder{
+					font-size: 22px;
+					font-style: italic; 
+					color: #B8B8B8; 
+					opacity: 1; 
+				}
+				::-ms-input-placeholder{
+					font-size: 30px; 
+					font-style: italic; 
+					color: #B8B8B8;
+					/*Placeholder style for ms edge. i read on google this psuedo element is not standard, my question is; is it still recognised and accepted by developers although its not standard yet?*/
+				}
+				input[type=submit]{
+					color: #fff;
+					margin-top: 3%;
+					padding-left: 1%;
+					border: 1px solid rgba(200,200,200,.5);
+					border-radius: 50px;
+					width: 20%;
+					transition: width 1s;
+				}
+				input[type=submit]:hover{
+					background-color: rgba(245,222,179,.3);
+					width: 25%;
+				}
+				p{
+					text-align: center;
+					margin-top: 8%;
+					font-size: 1.5em;
+					font-weight: bold;
+				}
+				.click-here{
+					text-align: center;
+					margin-top: 6%;
+					padding-left: 5%;
+					font-size: 1.1em;
+				}
+				a{
+					text-decoration: none;
+					color: #00FF7F;
+				}
+			</style>
+		</head>
+		<body>
+			<div class="container" id="flex">
+				<div class="content">
+					<div>
+						<img src="6.jpg" class="logo">
+					</div>
+					<p>Login Here</p>
+					<div class="input"></div>
+
+					<form action="http://www.w3schools.com/html/">
+						<input type="text" name="usernsme" placeholder="usernsme">
+						<input type="password" name="psw" placeholder="password" id="icon">
+						<input type="submit" value="Submit" name="submit">
+					</form>
+
+					<div class="click-here">
+						Forgot your password? 
+						<a href="http://www.w3schools.com/html/">Click here</a> 
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
